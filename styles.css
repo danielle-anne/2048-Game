@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins&family=Roboto:wght@500&display=swap');
+
 :root{
     --board: #cdc1b5;
     --border-color: #bbaDa0;
@@ -17,6 +19,9 @@
 
 }
 
+*{
+    font-family: 'Roboto', "sans-serif";
+}
 
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -28,14 +33,40 @@ body {
     margin: 0 auto;
 }
 
+.header-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.title{
+    text-align: left;
+    width: 15%;
+}
+.title h1{
+    margin-top: 15px;
+    font-size: 50px;
+    letter-spacing: 2px;
+    font-weight: 800;
+    padding: 0;
+    /* margin-bottom: 5px; */
+}
+.title h5{
+    margin-top: 5px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.excess{
+    width: 35%;
+}
+
+
 .score-container {
     margin: 10px 0;
     height: 57px;
     font-weight: 600;
-}
-
-.score-container {
-    align-items: flex-start;
+    width: 15%;
+    text-align: right;
 }
 
 #score {
@@ -43,6 +74,20 @@ body {
     font-size: 26px;
 }
 
+.restart{
+    padding: 7px;
+    width: 135px;
+    background-color: #383327;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+}
+.reset{
+    margin-top: 13px;
+}
 .score-label {
     margin-bottom: 2px;
 }

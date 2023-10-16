@@ -9,24 +9,44 @@
     </head>
     <body>
         <div class="container">
-            <h1>2048</h1>
-        <h5>Created by: Danielle Anne</h5>
-        <hr id="top-line">
-            <div class="score-container">
-                <div class="score-label">
-                    Score: <!-- <span id="score"></span> -->
+            <div class="header-container">
+                <div class="excess"></div>
+                <div class="title">
+                    <h1>2048</h1>
+                    <h5>Created by: Danielle Anne</h5>
                 </div>
-                <div id="score">
-                    
-                </div> 
+                
+                <div class="score-container">
+                    <div class="score-label">
+                        Score:
+                    </div>
+                    <div id="score">
+                        <!-- displays the current score -->0
+                    </div>
+                    <div class="reset">
+                        <button class="restart" onclick="newGame()">New Game</button>
+                    </div>
+                </div>
+                <div class="excess"></div>
             </div>
+            <!-- <h1>2048</h1>
+            <h5>Created by: Danielle Anne</h5>
+            <hr id="top-line">
+                <div class="score-container">
+                    <div class="score-label">
+                        Score:
+                    </div>
+                    <div id="score">
+                        
+                    </div> 
+                </div> -->
 
 
-        <!-- <h2>Score: <span id="score">0</span></h2> -->
+            <!-- <h2>Score: <span id="score">0</span></h2> -->
 
-        <div id="board">
-            <!-- Automatic -->
-        </div>
+            <div id="board">
+                <!-- Automatic -->
+            </div>
         </div>
 
         <script src="logic.js"></script>

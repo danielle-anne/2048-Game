@@ -52,8 +52,6 @@ function updateTile(tile, num){
 
     // clear the classList to avoid multiple classes
     tile.classList.value = "";
-
-    // add a class named "tile"
     tile.classList.add("tile");
 
     // This will check for the "num" parameter and will apply specific styling based on the number value.
@@ -176,11 +174,11 @@ function slideLeft(){
 
             // line for animation
             if (originalRow[c] !== num && num !== 0) {
-                tile.style.animation = "slide-from-right 0.3s";
+                tile.style.animation = "slide-from-right 0.2s";
 
                 setTimeout(()=>{
                     tile.style.animation = "";
-                }, 300);
+                }, 200);
             }
 
             updateTile(tile, num);
@@ -215,11 +213,11 @@ function slideRight(){
 
             // line for animation
             if (originalRow[c] !== num && num !== 0) {
-                tile.style.animation = "slide-from-left 0.3s";
+                tile.style.animation = "slide-from-left 0.2s";
 
                 setTimeout(()=>{
                     tile.style.animation = "";
-                }, 300);
+                }, 200);
             }
 
             updateTile(tile, num);
@@ -256,10 +254,10 @@ function slideUp(){
             let num = board[r][c];
 
             if (changedIndices.includes(r) && num !== 0) {
-                tile.style.animation = "slide-from-bottom 0.3s"
+                tile.style.animation = "slide-from-bottom 0.2s"
                 setTimeout(()=>{
                     tile.style.animation = ""
-                }, 300);
+                }, 200);
             }
 
             updateTile(tile, num)
@@ -300,10 +298,10 @@ function slideDown(){
             let num = board[r][c];
 
             if (changedIndices.includes(r) && num !== 0) {
-                tile.style.animation = "slide-from-top 0.3s"
+                tile.style.animation = "slide-from-top 0.2s"
                 setTimeout(()=>{
                     tile.style.animation = ""
-                }, 300);
+                }, 200);
             }
 
             updateTile(tile, num)
@@ -359,13 +357,13 @@ function checkWin(){
             // check if current tile == 2048 and is2048Exist == false
             if(board[r][c] == 2048 && is2048Exist == false){
                 alert('You Win! You got the 2048');  // If true, alert and  
-                is2048Exist = true;     // reassigned the value of is2048Exist to true to avoid continuous appearance of alert.
+                is2048Exist = true;
             } else if(board[r][c] == 4096 && is4096Exist == false) {
                 alert("You are unstoppable at 4096! You are fantastically unstoppable!");
-                is4096Exist = true;     // reassigned the value of is4096Exist to true to avoid continuous appearance of alert.
+                is4096Exist = true;
             } else if(board[r][c] == 8192 && is8192Exist == false) {
                 alert("Victory!: You have reached 8192! You are incredibly awesome!");
-                is8192Exist = true;    // reassigned the value of is8192Exist to true to avoid continuous appearance of alert.
+                is8192Exist = true;
             }
         }
     }
@@ -401,6 +399,19 @@ function hasLost() {
 }
 
 // RestartGame by replacing all values into zero.
+function newGame(){
+    // Iterate in the board and 
+    for(let r = 0; r < rows; r++){
+        for(let c = 0; c < columns; c++){
+            board[r][c] = 0;    // change all values to 0
+        }
+    }
+    score = 0;    // new tile   
+    // setTwo();
+    alert("Press any arrow key to restart ")
+}
+
+// RestartGame by replacing all values into zero.
 function restartGame(){
     // Iterate in the board and 
     for(let r = 0; r < rows; r++){
@@ -409,7 +420,7 @@ function restartGame(){
         }
     }
     score = 0; 
-    setTwo()    // new tile   
+    setTwo();    // new tile   
 }
 
 // mobile compatibility
