@@ -407,7 +407,7 @@ function newGame(){
         }
     }
     score = 0;    // new tile   
-    // setTwo();
+    setTwo();
     alert("Press any arrow key to restart ")
 }
 
@@ -420,7 +420,7 @@ function restartGame(){
         }
     }
     score = 0; 
-    setTwo();    // new tile   
+    setTwo();
 }
 
 // mobile compatibility
